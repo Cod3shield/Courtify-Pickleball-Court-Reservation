@@ -24,12 +24,15 @@
 
 * MongoDB
 
-## Live Demo
+## Live Application
 
-🌐 https://courtifyreservation.netlify.app/
+🌐 https://dinktopia.netlify.app/
+
+> Deployed with client approval
+
 
 ## Project Description
 
-Codeshield was developed to provide an efficient and convenient solution for pickleball players and venue owners. Players can easily search for courts, check availability, and make reservations online, while venue owners can manage court listings, schedules, and bookings through a centralized platform.
+Dinktopia is a web-based platform designed to streamline pickleball court reservations for players and venue owners. It enables users to search available courts, view real-time availability, and make bookings seamlessly, while providing venue owners with tools to manage listings, schedules, and reservations efficiently.
 
-The system aims to improve accessibility, reduce manual booking processes, and enhance the overall experience of the growing pickleball community.
+The platform improves accessibility, reduces manual booking processes, and enhances the overall experience within the growing pickleball community.

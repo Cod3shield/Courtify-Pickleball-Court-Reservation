@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Booking Confirmed</title>
+
+  <link rel="stylesheet" href="submitted.css">
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="top">
+
+      <div class="check-icon">✓</div>
+
+      <h1>Booking Confirmed!</h1>
+
+      <p>
+        Your booking has been successfully confirmed
+      </p>
+
+    </div>
+
+    <!-- RECEIPT -->
+    <div class="card" id="receipt">
+
+      <!-- BOOKING DETAILS -->
+      <div class="section">
+
+        <div class="section-title">
+
+          <span>Booking Details</span>
+
+          <span class="status">
+            CONFIRMED
+          </span>
+
+        </div>
+
+        <div class="label">
+          Booking ID
+        </div>
+
+        <div class="info" id="bookingId">
+        </div>
+
+      </div>
+
+      <!-- VENUE -->
+      <div class="section">
+
+        <div class="section-title">
+          Venue
+        </div>
+
+        <div class="info">
+
+          <strong>
+            Cøurtify
+          </strong>
+
+          <br>
+
+          📍 Mindanao, Philippines
+
+          <br>
+
+          Lanao Del Norte
+
+        </div>
+
+      </div>
+
+      <!-- SCHEDULE -->
+      <div class="section">
+
+        <div class="section-title">
+          Schedule Time
+        </div>
+
+        <div class="info" id="bookingDate">
+        </div>
+
+        <div class="court-badge" id="courtSchedule">
+        </div>
+
+      </div>
+
+      <!-- CONTACT -->
+      <div class="section">
+
+        <div class="section-title">
+          Reserved By
+        </div>
+
+        <div class="info">
+
+          <span id="customerName"></span>
+
+          <br>
+
+          <span id="customerEmail"></span>
+
+          <br>
+
+          <span id="customerPhone"></span>
+
+        </div>
+
+      </div>
+
+      <!-- PAYMENT -->
+      <div class="section">
+
+        <div class="section-title">
+          Payment Summary
+        </div>
+
+        <div class="payment-row">
+
+          <span>Base Price</span>
+
+          <span id="basePrice">
+            ₱0.00
+          </span>
+
+        </div>
+
+        <div class="payment-row">
+
+          <span>Platform Fee</span>
+
+          <span>₱0.00</span>
+
+        </div>
+
+        <hr style="margin:15px 0;">
+
+        <div class="payment-row total">
+
+          <span>Total Paid</span>
+
+          <span id="totalPaid">
+            ₱0.00
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- BUTTONS -->
+    <div class="buttons">
+
+      <button class="btn" onclick="window.location.href='picklehaus.html'">
+        Return to Booking
+      </button>
+
+      <button class="btn" onclick="downloadReceipt()">
+
+        ⬇ Download Receipt
+
+      </button>
+
+      <button class="btn" onclick="shareReceipt()">
+
+        ↗ Share
+
+      </button>
+      
+    </div>
+
+    <!-- INFO BOX -->
+    <div class="info-box">
+
+      <h3>Key Information</h3>
+
+      <ul>
+
+        <li>
+          Please be present 30 minutes before your scheduled time.
+        </li>
+
+        <li id="emailMessage">
+        </li>
+
+        <li>
+          For any changes, call +69999999999
+          or email cybersreseearch@gmail.com
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+  <!-- HTML2PDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+  <!-- JS -->
+  <script src="submitted.js"></script>
+
+</body>
+
+</html>

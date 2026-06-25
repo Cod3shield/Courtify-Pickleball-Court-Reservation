@@ -1,0 +1,394 @@
+<!-- START: Pickle Rally Zone Booking Page -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Flatpickr Calendar CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+  <!-- Page Title -->
+  <title>Cøurtify</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="picklehaus.css">
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER SECTION
+  ========================== -->
+  <header>
+
+    <div class="container">
+
+      <nav class="navbar">
+
+        <!-- Logo -->
+        <a href="home.html" class="logo">
+          Cøurtify
+        </a>
+
+        <!-- Hamburger Button -->
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+        <!-- Menu -->
+        <div class="menu" id="menu">
+          <a href="performancestats.html">Performance Stats</a>
+          <a href="comingsoon.html">List Your Venue</a>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="right-links">
+          <a href="comingsoon.html" class="btn">Sign In</a>
+        </div>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+  <!-- =========================
+       VENUE HEADER
+  ========================== -->
+  <div class="venue-header">
+
+    <!-- Top Section -->
+    <div class="top-row">
+
+      <!-- Left Side -->
+      <div class="left">
+
+        <!-- Venue Logo -->
+        <img class="venue-logo" src="courtify.png" alt="Pickleball Court">
+
+        <!-- Venue Info -->
+        <div class="info">
+
+          <!-- Name -->
+          <div class="title-row">
+            <h1>Cøurtify</h1>
+            <span class="verified">✔</span>
+          </div>
+
+          <!-- Location -->
+          <div class="location">
+            📍 Mindanao, Philippines
+
+          </div>
+
+          <!-- Description -->
+          <p class="desc">
+            Your Pickleball Paradise
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- Right Side -->
+      <div class="right">
+        <span class="status">Available</span>
+      </div>
+
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <a href="picklehaus.html" class="tab active">Book</a>
+      <a href="#" class="tab" id="creatorBtn">Meet the Creator</a>
+    </div>
+
+    <!-- =========================================
+     START: MEET THE CREATOR MODAL
+========================================= -->
+
+    <div id="creatorModal" class="modal">
+
+      <div class="modal-content">
+
+        <span class="close">&times;</span>
+
+        <img src="./images/dark grey.png" alt="Creator" class="creator-img">
+
+        <h2 class="creator-name">
+          Cødeshield
+        </h2>
+
+        <p class="bio">
+          <!-- <strong>Codeshield</strong> is the creator and developer behind Dinktøpia. -->
+          A dedicated programmer and cybersecurity professional, he is
+          passionate about designing modern web applications that solve real-world
+          problems through technology. Dinktøpia was created with the vision of
+          making sports venue reservations more accessible, efficient, and convenient
+          for players and venue owners alike.
+
+          With a growing background in software development and cybersecurity,
+          Codeshield focuses on building secure, scalable, and user-centered digital
+          solutions. His commitment to continuous learning and innovation drives
+          him to develop platforms that not only perform effectively but also
+          deliver a trustworthy and enjoyable user experience.
+        </p>
+
+        <p class="creator-links">
+          GitHub: <a href="https://github.com/cod3shield" target="_blank" rel="noopener noreferrer">
+            github.com/cod3shield
+          </a>
+        </p>
+      </div>
+
+    </div>
+
+    <!-- =========================================
+     END: MEET THE CREATOR MODAL
+========================================= -->
+
+  </div>
+
+  <!-- =========================
+     BOOKING SECTION TITLE
+========================= -->
+
+  <div class="booking-section-title">
+
+    <h2 class="booking-heading">
+      Court Ready
+    </h2>
+
+    <p class="booking-subtext">
+     Select court & time slots (drag). Demo only.<br>
+      Official: https://dinktopia.netlify.app
+    </p>
+    
+
+  </div>
+
+  <!-- =========================
+       BOOKING SECTION
+  ========================== -->
+  <!-- Calendar Wrapper (renamed to avoid CSS conflicts) -->
+  <div class="calendar-app-wrapper">
+
+    <!-- Toggle Button -->
+    <div id="calendarBtn">Calendar</div>
+
+    <!-- Calendar Box -->
+    <div id="calendar">
+
+      <!-- Month Navigation Header -->
+      <div class="month-header">
+
+        <button class="nav-btn" id="prev">&#10094;</button>
+
+        <h2 id="monthYear"></h2>
+
+        <button class="nav-btn" id="next">&#10095;</button>
+
+      </div>
+
+      <!-- Week Labels -->
+      <div class="weekdays">
+        <div>Sun</div>
+        <div>Mon</div>
+        <div>Tue</div>
+        <div>Wed</div>
+        <div>Thu</div>
+        <div>Fri</div>
+        <div>Sat</div>
+      </div>
+
+      <!-- Calendar Dates -->
+      <div class="dates" id="dates"></div>
+
+    </div>
+
+  </div>
+
+  <!-- Legend -->
+  <div class="legend">
+
+    <div class="legend-item">
+      <div class="box available"></div>
+      Open Slot
+    </div>
+
+    <div class="legend-item">
+      <div class="box selected-box"></div>
+      Current Pick
+    </div>
+
+    <div class="legend-item">
+      <div class="box booked-box"></div>
+      Reserved Slot
+    </div>
+
+    <!-- <div class="legend-item">
+    <div class="box pending"></div>
+    Waiting Approval
+  </div> -->
+  </div>
+
+  <!-- Booking Table -->
+  <table>
+
+    <thead>
+      <tr>
+        <th>Time</th>
+        <th>
+          Schedule your appointment for ₱199.<br>
+
+        </th>
+      </tr>
+    </thead>
+
+    <tbody id="tableBody"></tbody>
+
+  </table>
+
+  </section>
+
+  <!-- =========================
+       BOOKING PANEL
+  ========================== -->
+  <div id="bookingPanel" class="hidden">
+
+    <div class="booking-summary">
+
+      <h2>Booking Summary</h2>
+
+      <div id="summaryContent"></div>
+
+      <div class="summary-total">
+        Total:
+        <span id="totalPrice">₱0</span>
+      </div>
+
+      <button id="bookBtn">
+        Proceed to Booking
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- =========================
+       FOOTER SECTION
+  ========================== -->
+  <footer class="footer">
+
+    <div class="footer-container">
+
+      <div class="footer-grid">
+
+        <!-- Footer About -->
+        <div class="footer-about">
+
+          <div class="footer-logo">
+            <div class="logo-icon">🏆</div>
+            <h2>Cøurtify</h2>
+          </div>
+
+          <p>
+            The Philippines’ trusted platform for seamless
+            sports venue bookings making court reservations
+            faster easier and more convenient for everyone.
+          </p>
+
+          <div class="socials">
+
+            <a href="https://www.facebook.com/" target="_blank" class="fb">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a href="https://www.tiktok.com/" target="_blank" class="tiktok">
+              <i class="fab fa-tiktok"></i>
+            </a>
+
+            <a href="https://www.instagram.com/" target="_blank" class="ig">
+              <i class="fab fa-instagram"></i>
+            </a>
+
+
+            <a href="https://mail.google.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="gmail">
+             <i class="fas fa-envelope"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3>QUICK LINKS</h3>
+          <ul>
+            <li><a href="#" onclick="openModal('booking')">Booking Guide</a></li>
+            <li><a href="#" onclick="openModal('panel')">My Panel</a></li>
+            <li><a href="#" onclick="openModal('story')">Our Story</a></li>
+            <li><a href="#" onclick="openModal('updates')">Latest Updates</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal Links -->
+        <div>
+          <h3>LEGAL</h3>
+          <ul>
+            <li><a href="#" onclick="openModal('agreement')">User Agreement</a></li>
+            <li><a href="#" onclick="openModal('protection')">Data Protection</a></li>
+            <li><a href="#" onclick="openModal('rules')">Booking Rules</a></li>
+            <li><a href="#" onclick="openModal('payment')">Payment Information</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Information -->
+        <div>
+          <h3>CONTACT US</h3>
+          <ul class="contact-info">
+            <li>✉️ cybersresearch@gmail.com</li>
+            <li>
+              📍 Mindanao
+               Philippines
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Cøurtify. All rights reserved.</p>
+      </div>
+
+    </div>
+
+  </footer>
+
+  <!-- Modal -->
+  <div id="infoModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <p id="modalText"></p>
+    </div>
+  </div>
+
+  <!-- External JavaScript -->
+  <script src="picklehaus.js"></script>
+  <script src="common.js"></script>
+
+</body>
+
+</html>

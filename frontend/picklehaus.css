@@ -1,0 +1,1044 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+/* =========================
+   BODY
+========================= */
+body{
+  background:#f5f2ed;
+}
+
+/* =========================
+   VENUE HEADER
+========================= */
+.venue-header{
+  background:#f6f1ea;
+  padding:25px 200px;
+  border-radius:12px;
+  margin-top:50px;
+}
+
+.top-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:20px;
+}
+
+/* LEFT SIDE */
+.left{
+  display:flex;
+  gap:16px;
+}
+
+.venue-logo{
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+/* INFO */
+.title-row{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-bottom:5px;
+}
+
+.title-row h1{
+  font-size:25px;
+  font-style:italic;
+}
+
+.location{
+  margin-top:5px;
+  color:#555;
+  font-style:italic;
+}
+
+.desc{
+  margin-top:10px;
+  color:#666;
+  line-height:1.5;
+  max-width:700px;
+  font-style:italic;
+}
+
+.verified{
+  background-color:green;
+  color:white;
+  font-size:18px;
+  width:28px;
+  height:28px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* STATUS */
+.status{
+  background:#22c55e;
+  color:white;
+  padding:5px 13px;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:bold;
+  font-style: italic;
+}
+
+/* =========================
+   TABS
+========================= */
+.tabs{
+  margin-top:20px;
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+/* Tab button styling for navigation items */
+.tabs .tab{
+  padding:6px 15px;
+  border:none;
+  border-radius:20px;
+  background:#e5e5e5;
+  cursor:pointer;
+  transition:0.3s ease;
+  font-size: 14px;
+  font-style:italic;
+  font-weight:600;
+  text-decoration:none; 
+  color:black; 
+  display:inline-block; 
+}
+
+/* hover effect */
+.tabs .tab:hover{
+  background:#D3D3FF;
+  color:#222;
+}
+
+/* active tab */
+.tabs .tab.active{
+  background:purple;
+  color:white;
+}
+
+.tabs .tab:hover{
+  background:rgb(231, 41, 231);
+  color:#222;
+}
+
+.slot{
+  font-style:italic;
+  font-weight:bold;
+}
+
+.time{
+  font-style:italic;
+  font-weight:bold;
+}
+
+.locked{
+  background: #ddd;
+  color: #888;
+  pointer-events: none;
+}
+
+/* =========================
+   BOOKING SECTION
+========================= */
+.booking-section{
+  margin-top:30px;
+
+  /* Adds left and right spacing */
+  padding:0 110px;
+}
+
+.booking-container{
+  background:#fff;
+  padding:25px;
+  border-radius:14px;
+  box-shadow:0 2px 10px rgba(0,0,0,0.08);
+
+  /* Prevents full width */
+  width:90%;
+
+  /* Maximum container width */
+  max-width:1300px;
+
+  /* Centers the container */
+  margin:0 auto;
+}
+
+/* =========================
+   TOP BAR
+========================= */
+.top-bar{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+  margin-bottom:20px;
+}
+
+/* MAIN WRAPPER (renamed to avoid conflicts) */
+.calendar-app-wrapper{
+  position:relative;
+  display:inline-block;
+}
+
+/* TOGGLE BUTTON */
+#calendarBtn{
+  display:inline-block;
+  margin:10px auto;
+  background:purple;
+  color:white;
+  padding:7px 15px;
+  border-radius:10px;
+  cursor:pointer;
+  font-size:13px;
+  font-weight:bold;
+  font-style:italic;
+  text-align:center;
+  margin-left:200px;
+  box-shadow:0 3px 8px rgba(0,0,0,0.2);
+}
+
+#calendarBtn:hover{
+  background:rgb(231, 41, 231);
+  color: #222;
+}
+
+/* CALENDAR CONTAINER */
+#calendar{
+  position:absolute;
+  top:60px;
+  left:0;
+  width:300px;
+  margin-left:200px;
+  background:#fff;
+  border-radius:15px;
+  font-style:italic;
+  padding:15px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.15);
+  z-index:999;
+  display:none;
+}
+
+/* =========================
+   BOOKING SECTION TITLE
+========================= */
+.booking-section-title{
+  margin-top:25px;
+  margin-bottom:20px;
+}
+
+.booking-heading{
+  font-size:24px;
+  font-weight:700;
+  color:#111827;
+  font-style:italic;
+  margin-left:200px;
+  margin-bottom:10px;
+}
+
+.booking-subtext{
+  font-size:14px;
+  color:#6b7280;
+  font-style:italic;
+  line-height:1.6;
+  margin-left:200px;
+}
+
+/* =========================
+   HEADER (MONTH NAVIGATION)
+========================= */
+.month-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:20px;
+}
+
+#monthYear{
+  font-size:22px;
+  color:#333;
+}
+
+/* Navigation buttons */
+.nav-btn{
+  width:35px;
+  height:35px;
+  border:none;
+  border-radius:50%;
+  background:purple;
+  color:white;
+  font-size:18px;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+.nav-btn:hover{
+  background:rgb(231, 41, 231);
+  color: #222;
+  transform:scale(1.1);
+}
+
+/* Weekday and date grid */
+.weekdays,
+.dates{
+  display:grid;
+  grid-template-columns:repeat(7,1fr);
+  gap:4px;
+  text-align:center;
+  font-style:italic;
+}
+
+/* Weekday labels */
+.weekdays div{
+  font-weight:bold;
+  color:#777;
+  padding:5px 0;
+}
+
+/* Individual date box */
+.date{
+  padding:6px 0;
+  border-radius:10px;
+  background:#f1f3f5;
+  line-height:25px;
+  cursor:pointer;
+  transition:0.2s;
+  font-weight:bold;
+  font-size:13px;
+}
+
+/* Hover effect */
+.date:hover{
+  background:rgb(231, 41, 231);
+  color:#222;
+}
+
+/* Highlight current date */
+.today{
+  background:purple;
+  color:white;
+}
+
+/* =========================
+   LEGEND
+========================= */
+.legend{
+  display:flex;
+  flex-wrap:wrap;
+  gap:18px;
+  margin:20px 0 20px 200px;
+}
+
+.legend-item{
+  display:flex;
+  align-items:center;
+  gap:7px;
+  font-size:14px;
+  font-style:italic;
+  font-weight:700;
+}
+
+.box{
+  width:15px;
+  height:15px;
+  border-radius:4px;
+}
+
+.available{
+  background:white;
+}
+
+.selected-box{
+  background:purple;
+}
+
+.booked-box{
+  background:#ff0015;
+}
+
+/* .pending{
+  background:#ffbf00;
+} */
+
+.peak{
+  background:#d6f5ff;
+}
+
+/* =========================
+   TABLE
+========================= */
+table{
+  width:70%;
+  margin:0 auto;
+  border-collapse:collapse;
+  overflow:hidden;
+  border-radius:10px;
+  font-style:italic;
+}
+
+th,
+td{
+  border:1px solid #ddd;
+  text-align:center;
+  padding:15px;
+  font-size:13px;
+}
+
+th{
+  background:#f1ede7;
+}
+
+.time{
+  background:#faf7f2;
+  font-weight:bold;
+  width:120px;
+}
+
+.slot{
+  background:white;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+.slot:hover{
+  background:#f0fff4;
+}
+
+.selected{
+  background:purple !important;
+  color:white;
+  font-weight:bold;
+}
+
+.booked{
+  background:#f8d7da;
+  color:red;
+  font-size:12px;
+  font-weight:bold;
+  cursor:not-allowed;
+}
+
+/* =========================
+   BOOKING SUMMARY PANEL
+========================= */
+.hidden{
+  display:none;
+}
+
+#bookingPanel{
+  width:70%;
+  max-width:1000px;
+  margin:30px auto;
+}
+
+.booking-summary{
+  background:#ffffff;
+  padding:25px;
+  border-radius:16px;
+  font-style:italic;
+  box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
+
+/* TITLE */
+.booking-summary h2{
+  font-size:22px;
+  margin-bottom:20px;
+  color:#222;
+}
+
+/* SUMMARY CONTENT */
+
+#summaryContent{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  margin-bottom:20px;
+
+  /* SCROLL */
+  max-height: 100px;
+  overflow-y:auto;
+  padding-right:5px;
+}
+
+/* SUMMARY ITEM */
+.summary-item{
+  padding:14px 16px;
+  border-radius:12px;
+  background:#f5f5f5;
+  font-size:14px;
+  font-weight:600;
+  color:#ff0000;
+}
+
+/* TOTAL */
+.summary-total{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-top:10px;
+  margin-bottom:20px;
+  font-size:28px;
+  font-weight:bold;
+  color:red;
+}
+
+/* BUTTON */
+#bookBtn{
+  width:100%;
+  padding:16px;
+  border:none;
+  border-radius:12px;
+  background: purple;
+  color:white;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
+  transition:0.3s ease;
+  font-style:italic;
+}
+
+#bookBtn:hover{
+  background:rgb(231, 41, 231);
+  color: #222;
+}
+
+/* Parent reference container */
+.date-wrapper{
+  position:relative;
+  display:flex;
+  justify-content:center;
+}
+
+.date-box{
+  font-style:italic;
+  cursor:pointer;
+  user-select:none;
+}
+
+/* Calendar positioned directly below Today */
+.calendar-popup{
+  position:absolute;
+  top:45px;
+  left:50%;
+  transform:translateX(-50%);
+  background:white;
+  padding:10px;
+  border-radius:10px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.2);
+  z-index:999;
+}
+
+/* =========================================
+   START: MEET THE CREATOR MODAL STYLES
+========================================= */
+
+.modal{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    font-style: italic;
+}
+
+.modal-content{
+    background:#fff;
+    width:550px;          
+    max-width:90%;
+    max-height:85vh;      
+    overflow-y:auto;      
+    padding:25px;
+    /* border-radius:20px; */
+    text-align:center;
+    position:relative;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+.close{
+    position:absolute;
+    top:10px;
+    right:15px;
+    font-size:28px;
+    cursor:pointer;
+}
+
+.close:hover{
+    color:red;
+}
+
+.creator-img{
+    width:120px;          
+    height:120px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #d414e8;
+    margin-bottom:15px;
+}
+
+.creator-name{
+    margin-bottom:10px;
+}
+
+.creator-role{
+    color:#d414e8;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.bio{
+    color:#555;
+    line-height:1.5;
+    font-size:15px;
+    margin-bottom:15px;
+}
+
+.creator-links{
+    margin-top:10px;
+}
+
+.creator-links a{
+    color:#d414e8;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.creator-links a:hover{
+    text-decoration:underline;
+}
+
+
+/* =========================
+   TABLET RESPONSIVE
+========================= */
+@media (max-width:1024px){
+
+  /* HEADER */
+  .venue-header{
+    padding:20px 40px;
+  }
+
+  .top-row{
+    gap:15px;
+  }
+
+  /* BOOKING SECTION */
+  .booking-section{
+    padding:0 40px;
+  }
+
+  .booking-container{
+    width:100%;
+    padding:20px;
+  }
+
+  /* CALENDAR */
+  #calendarBtn{
+    margin-left:40px;
+  }
+
+  #calendar{
+    margin-left:40px;
+    width:280px;
+  }
+
+  /* BOOKING TITLE */
+  .booking-heading{
+    margin-left:40px;
+    font-size:23px;
+  }
+
+  .booking-subtext{
+    margin-left:40px;
+  }
+
+  /* LEGEND */
+  .legend{
+    margin-left:40px;
+    gap:14px;
+  }
+
+  /* Tabs wrap nicely on tablet */
+  .tabs{
+    gap:8px;
+  }
+
+  .tabs .tab{
+    font-size:13px;
+    padding:6px 12px;
+  }
+
+  /* TABLE */
+  table{
+    width:90%;
+  }
+
+  th,
+  td{
+    padding:12px 8px;
+    font-size:12px;
+  }
+
+  .time{
+    width:100px;
+    font-size:12px;
+  }
+
+  /* BOOKING PANEL */
+  #bookingPanel{
+    width:85%;
+  }
+
+  .booking-summary{
+    padding:22px;
+  }
+
+  .summary-total{
+    font-size:24px;
+  }
+
+  #bookBtn{
+    font-size:17px;
+  }
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+@media (max-width:768px){
+
+  /* HEADER */
+  .venue-header{
+    padding:18px 15px;
+  }
+
+  /* Keep left and right in the same row */
+  .top-row{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:10px;
+  }
+
+  /* LEFT SIDE */
+  .left{
+    display:flex;
+    flex-direction:row;
+    gap:10px;
+    flex:1;
+  }
+
+  /* LOGO */
+  .venue-logo{
+    width:45px;
+    height:45px;
+  }
+
+  /* TITLE */
+  .title-row h1{
+    font-size:20px;
+  }
+
+  /* LOCATION */
+  .location{
+    font-size:13px;
+  }
+
+  /* DESCRIPTION */
+  .desc{
+    font-size:13px;
+    line-height:1.4;
+  }
+
+  /* AVAILABLE BADGE */
+  .status{
+    font-size:11px;
+    padding:5px 12px;
+    white-space:nowrap;
+    align-self:flex-start;
+  }
+
+  /* BUTTONS */
+  .tabs{
+    display:flex;
+    justify-content:flex-start;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:15px;
+  }
+
+ .tabs .tab{
+    width:auto;
+    padding:7px 15px;
+    font-size:12px;
+    border-radius:18px;
+  }
+
+  /* BOOKING SECTION */
+  .booking-section{
+    padding:0 15px;
+  }
+
+  .booking-container{
+    width:100%;
+    padding:15px;
+  }
+
+  /* TOP BAR */
+  .top-bar{
+    flex-wrap:wrap;
+  }
+
+  .date-box{
+    min-width:auto;
+    width:100%;
+  }
+
+  /* LEGEND */
+  .legend{
+    gap:10px;
+    margin-left:20px;
+  }
+
+  .legend-item{
+    font-size:12px;
+  }
+
+  /* TABLE RESPONSIVE */
+  table{
+    font-size:12px;
+    width:90%;
+  }
+
+  th,
+  td{
+    padding:10px 6px;
+    font-size:12px;
+  }
+
+  .time{
+    width:90px;
+    font-size:11px;
+  }
+
+  /* BOOKING PANEL */
+  #bookingPanel{
+     width:95%;
+    padding:0 15px;
+  }
+
+  .booking-summary{
+    padding:18px;
+  }
+
+  .booking-summary h2{
+    font-size:22px;
+  }
+
+  .summary-item{
+    font-size:14px;
+  }
+
+  .summary-total{
+    font-size:22px;
+  }
+
+  #bookBtn{
+    font-size:16px;
+    padding:14px;
+  }
+
+  .booking-heading{
+    font-size:23px;
+    margin-left:20px;
+  }
+
+  .booking-subtext{
+    font-size:13px;
+    margin-left:20px;
+  }
+
+  #calendar{
+    width:70%;
+    margin:0 auto;
+  }
+
+  .calendar-app-wrapper{
+    display:flex;
+    justify-content:center;
+  }
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+   UPDATED TO 480PX
+========================= */
+@media (max-width:480px){
+
+  .venue-header{
+    padding:18px 15px;
+  }
+
+  .top-row{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:10px;
+  }
+
+  .left{
+    display:flex;
+    flex-direction:row;
+    gap:10px;
+    flex:1;
+  }
+
+  .venue-logo{
+    width:45px;
+    height:45px;
+  }
+
+  .title-row h1{
+    font-size:20px;
+  }
+
+  .location{
+    font-size:13px;
+  }
+
+  .desc{
+    font-size:13px;
+    line-height:1.4;
+  }
+
+  .status{
+    font-size:11px;
+    padding:5px 12px;
+    white-space:nowrap;
+    align-self:flex-start;
+  }
+
+  .tabs{
+    display:flex;
+    justify-content:flex-start;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:15px;
+  }
+
+  .tabs .tab{
+    width:auto;
+    padding:7px 15px;
+    font-size:12px;
+    border-radius:18px;
+  }
+
+  .booking-section{
+    padding:0 15px;
+  }
+
+  .booking-container{
+    width:100%;
+    padding:15px;
+  }
+
+  .top-bar{
+    flex-wrap:wrap;
+  }
+
+  .date-box{
+    min-width:auto;
+    width:100%;
+  }
+
+  .legend{
+    gap:10px;
+    margin-left:20px;
+  }
+
+  .legend-item{
+    font-size:12px;
+  }
+
+  table{
+    font-size:12px;
+    width:90%;
+  }
+
+  th,
+  td{
+    padding:10px 6px;
+    font-size:12px;
+  }
+
+  .time{
+    width:90px;
+    font-size:11px;
+  }
+
+  #bookingPanel{
+    width:100%;
+    padding:0 15px;
+  }
+
+  .booking-summary{
+    padding:18px;
+  }
+
+  .booking-summary h2{
+    font-size:22px;
+  }
+
+  .summary-item{
+    font-size:14px;
+  }
+
+  .summary-total{
+    font-size:22px;
+  }
+
+  #bookBtn{
+    font-size:16px;
+    padding:14px;
+  }
+
+  .booking-heading{
+    font-size:23px;
+    margin-left:20px;
+  }
+
+  .booking-subtext{
+    font-size:13px;
+    margin-left:20px;
+  }
+
+  #calendar{
+    width:80%;
+    margin:0 auto;
+  }
+
+  .calendar-app-wrapper{
+    display:flex;
+    justify-content:center;
+  }
+}
+

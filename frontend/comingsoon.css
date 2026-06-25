@@ -1,0 +1,58 @@
+body {
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.typing {
+    color: #ff0000;
+    font-size: 80px;
+    font-family: monospace;
+    font-weight: bold;
+    overflow: hidden;
+    border-right: 3px solid #ff0000;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 1s steps(11) infinite alternate,
+               blink 0.7s infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 13ch;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .typing {
+        font-size: 60px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .typing {
+        font-size: 40px;
+        border-right: 2px solid #ff0000;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .typing {
+        font-size: 28px;
+        border-right: 2px solid #ff0000;
+    }
+}

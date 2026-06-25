@@ -1,0 +1,847 @@
+/* =========================
+   HERO SECTION STYLES
+========================= */
+.hero{
+  padding:60px 0 30px;
+  margin-top: 30px;
+}
+
+.hero h1{
+  color:#343a41;
+  font-size: 40px;
+  margin-bottom:10px;
+  font-style: italic;
+}
+
+.hero p{
+  color:#64748b;
+  margin-bottom:30px;
+  font-style: italic;
+}
+
+body{
+  background:#f5f2eb;
+  color:rgb(0, 0, 0);
+}
+
+/* =========================
+   HERO CONTROLS SECTION
+========================= */
+
+/* SEARCH BUTTON */
+.search-btn{
+  height: 40px;
+  padding: 0 25px;
+  border: none;
+  border-radius: 10px;
+  background: purple;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.search-btn:hover{
+  background: rgb(231, 41, 231);
+  color: #222;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero-controls{
+  display:flex;
+  flex-wrap:wrap;
+  gap:15px;
+  align-items:center;
+  margin-bottom:20px;
+  justify-content: center;
+}
+
+/* =========================
+   SEARCH BOX SECTION
+========================= */
+.search-container{
+  display:flex;
+  flex:2;
+  gap:10px;
+}
+
+.search{
+  width: 450px;
+  padding: 10px;
+  border:1px solid #ccc;
+  border-radius:12px;
+  outline:none;
+}
+
+/* =========================
+   LOCATION BANNER SECTION
+========================= */
+.location-banner{
+  background:white;
+  padding:1px 16px;
+  height:40px;
+  font-size: 14px;
+  border:1px solid #ddd;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-radius:10px;
+  font-style:italic;
+  width: 420px;
+}
+
+/* =========================
+   FILTER BUTTONS SECTION
+========================= */
+.filters{
+  display:flex;
+  justify-content:flex-end;
+  gap:10px;
+  flex:1;
+}
+
+.filter-btn{
+  padding:10px 18px;
+  border-radius:999px;
+  border:1px solid #ddd;
+  background:white;
+  cursor:pointer;
+}
+
+.active{
+  background:purple;
+  color:white;
+}
+
+/* =========================
+   VENUES SECTION STYLES
+========================= */
+.venues{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:25px;
+  padding-bottom:50px;
+}
+
+/* VENUE CARD (PRIMARY) */
+.venue-card{
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: .3s;
+
+  /* ===== ADDED FIX =====
+     Maintain same card width
+     even after filtering/search
+  ======================= */
+  max-width:420px;
+  width:100%;
+}
+
+.venue-card:hover{
+  transform: translateY(-5px);
+}
+
+.no-results{
+  display:none;
+  margin-bottom:20px;
+  padding:15px;
+  background:#ffe5e5;
+  color:#b30000;
+  border:1px solid #ffb3b3;
+  border-radius:10px;
+  text-align:center;
+  font-weight:bold;
+}
+
+/* =========================
+   CAROUSEL STYLES
+========================= */
+.carouselWrapper{
+  width: 100%;
+  max-width: 1000px;
+  height: 350px;
+  margin: 40px auto;
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.carouselWrapper .pic{
+  width: 120px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 15px;
+  position: absolute;
+  transition: transform 0.1s linear;
+}
+
+.carouselWrapper .top{
+  margin-top: -55px;
+}
+
+.carouselWrapper .bottom{
+  margin-top: -65px;
+}
+
+/* IMAGE WRAPPER */
+.image-wrapper{
+  position:relative;
+}
+
+.image-wrapper img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+
+.image-wrapper:hover img{
+  transform: scale(1.08);
+}
+
+/* CONTENT SECTION */
+.content{
+  display:flex;
+  flex-direction:column;
+  flex-grow:1;
+  padding:20px;
+}
+
+/* TITLE ROW */
+.title-row{
+  display:flex;
+  align-items:flex-start;
+  gap:15px;
+  margin-bottom:15px;
+}
+
+.venue-logo{
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  object-fit:cover;
+  border:3px solid #a70c0c;
+}
+
+.title-row h3{
+  font-size:20px !important;
+  margin-bottom:8px;
+  color: purple;
+  font-style: italic;
+}
+
+/* BADGES */
+.badges{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+}
+
+.available-badge{
+  background:purple;
+  color:#ffffff;
+  padding:5px 12px;
+  border-radius:20px;
+  font-style: italic;
+  font-size:12px;
+  font-weight:bold;
+}
+
+.verified-badge{
+  background:green;
+  color:white;
+  padding:5px 12px;
+  border-radius:20px;
+  font-style: italic;
+  font-size:12px;
+  font-weight:bold;
+}
+
+/* TEXT INFO */
+.location{
+  color:#666;
+  line-height:1.6;
+  margin-bottom:15px;
+  font-size: 13px;
+  font-weight:600;
+  font-style: italic;
+}
+
+.court-info{
+  margin-bottom:15px;
+  font-weight:bold;
+  color:#333;
+  font-style: italic;
+  font-size: 15px;
+}
+
+.mini-tag{
+  background-color:purple;
+  padding:5px 10px;
+  border-radius:20px;
+  color: white;
+  font-size:10px;
+  margin-left:10px;
+  font-style: italic;
+}
+
+.price{
+  color:rgb(255, 0, 0);
+  font-size:16px;
+  font-weight:bold;
+  margin-bottom:18px;
+  font-style: italic;
+}
+
+/* TAGS */
+.tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-bottom:20px;
+}
+
+.tag{
+  background:purple;
+  color:#ffffff;
+  padding:7px 13px;
+  border-radius:20px;
+  font-size:10px;
+  font-weight:bold;
+  font-style: italic;
+}
+
+/* BOOK BUTTON */
+.book-btn{
+  display: block;
+  width: 100%;
+  background-color: purple;
+  color: white;
+  padding: 8px 17px;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: auto;
+  transition: 0.2s;
+  font-style: italic;
+  font-size: 13px;
+}
+
+.book-btn:hover{
+  background-color: rgb(231, 41, 231);
+  color: #222;
+  transform: translateY(-1px);
+}
+
+/* =========================
+   VENUES2 SECTION STYLES
+========================= */
+.venues2{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:25px;
+  padding-bottom:50px;
+}
+
+.venue-card:hover{
+  transform:translateY(-5px);
+}
+
+.title-row{
+  display:flex;
+  align-items:flex-start;
+  gap:15px;
+  margin-bottom:15px;
+}
+
+.venue2-logo{
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  object-fit:cover;
+  border:3px solid #a70c0c;
+}
+
+/* =========================
+   COMING SOON ANIMATION
+========================= */
+.coming-soon-section{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-style: italic;
+  /* background: #00221a; */
+  overflow:hidden;
+}
+
+.coming-soon-text{
+  font-size:40px !important;
+  color:purple;
+  letter-spacing:10px;
+  white-space:nowrap;
+  overflow:hidden;
+  border-right:4px solid #38bdf8;
+  width:0;
+  animation: typing 1.5s steps(13) infinite alternate, blink .5s infinite;
+}
+
+@keyframes typing{
+  from{
+    width:0;
+  }
+
+  to{
+    width:20ch;
+  }
+}
+
+@keyframes blink{
+  50%{
+    border-color:transparent;
+  }
+}
+
+/* ========================================
+   TABLET RESPONSIVE (769px - 1024px)
+======================================== */
+@media (min-width: 769px) and (max-width: 1024px){
+
+  .hero{
+    padding: 50px 25px 25px;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  /* HERO TEXT FIX (removed margin hacks) */
+  .hero h1{
+    font-size: 28px !important;
+    line-height: 1.2;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .hero p{
+    font-size: 14px;
+    margin-bottom: 25px;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  /* HERO CONTROLS */
+  .hero-controls{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .search-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .search{
+    width: 80%;
+    font-size: 15px;
+  }
+
+  .search-btn{
+    font-size: 14px;
+    padding: 0 22px;
+  }
+
+  .location-banner{
+    width: 80%;
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .filters{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .filter-btn{
+    font-size: 13px;
+    padding: 10px 16px;
+  }
+
+  /* VENUE GRID (2 per row tablet) */
+  .venues,
+  .venues2{
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .venue-card{
+    max-width: 100%;
+    min-height: auto;
+  }
+
+  .image-wrapper img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .title-row h3{
+    font-size: 18px !important;
+  }
+
+  .venue-logo,
+  .venue2-logo{
+    width: 55px;
+    height: 55px;
+  }
+
+  .location,
+  .court-info,
+  .price{
+    font-size: 13px;
+  }
+
+  .tag{
+    font-size: 9px;
+  }
+
+  .book-btn{
+    font-size: 12px;
+  }
+
+  /* CAROUSEL */
+  .carouselWrapper{
+    height: 320px;
+  }
+
+  .carouselWrapper .pic{
+    width: 95px;
+    height: 90px;
+  }
+
+  .carouselWrapper .top{
+    top: 45px;
+  }
+
+  .carouselWrapper .bottom{
+    top: 170px;
+  }
+
+  .coming-soon-text{
+    font-size: 28px !important;
+    letter-spacing: 6px;
+  }
+}
+
+/* ========================================
+   MOBILE RESPONSIVE
+======================================== */
+@media (max-width: 768px){
+
+  .hero{
+    padding:40px 15px 20px;
+    margin-top:15px;
+    text-align:center;
+  }
+
+  .hero h1{
+    font-size:24px !important;
+    line-height:1.2;
+    margin-right:0;
+  }
+
+  .hero p{
+    font-size:13px;
+    margin-right:0;
+    margin-bottom:20px;
+  }
+
+  .hero-controls{
+    flex-direction:column;
+    align-items:stretch;
+    gap:12px;
+  }
+
+  .search-container{
+    flex-direction:column;
+    width:100%;
+  }
+
+  .search{
+    width:100%;
+    font-size:14px;
+  }
+
+  .search-btn{
+    width:100%;
+  }
+
+  .location-banner{
+    width:100%;
+    font-size:12px;
+    padding:0 12px;
+  }
+
+  .filters{
+    justify-content:center;
+    flex-wrap:wrap;
+    width:100%;
+  }
+
+  .filter-btn{
+    flex:1;
+    min-width:120px;
+    font-size:13px;
+  }
+
+  .venues,
+  .venues2{
+    grid-template-columns:1fr;
+    gap:20px;
+    padding:0 15px 40px;
+  }
+
+  .venue-card{
+    max-width:100%;
+    min-height:auto;
+  }
+
+ .carouselWrapper .top{
+  margin-top: -60px;
+}
+
+.carouselWrapper .bottom{
+  margin-top: -100px;
+}
+
+  .image-wrapper img{
+    height:200px;
+  }
+
+  .title-row{
+    gap:10px;
+  }
+
+  .venue-logo,
+  .venue2-logo{
+    width:50px;
+    height:50px;
+  }
+
+  .title-row h3{
+    font-size:18px !important;
+  }
+
+  .location,
+  .court-info,
+  .price{
+    font-size:13px;
+  }
+
+  .tags{
+    gap:6px;
+  }
+
+  .tag{
+    font-size:9px;
+    padding:6px 10px;
+  }
+
+  .book-btn{
+    font-size:12px;
+    padding:10px;
+  }
+
+  .carouselWrapper{
+    height:350px;
+    border-radius:20px;
+  }
+
+  .carouselWrapper .pic{
+    width:90px;
+    height:85px;
+  }
+
+  .carouselWrapper .top{
+    top:40px;
+  }
+
+  .carouselWrapper .bottom{
+    top:140px;
+  }
+
+  .coming-soon-section{
+    height:20px;
+    padding:20px 10px;
+  }
+
+  .coming-soon-text{
+    font-size:22px !important;
+    letter-spacing:4px;
+  }
+}
+
+/* ========================================
+   EXTRA SMALL DEVICES (480px BELOW)
+======================================== */
+@media (max-width: 480px){
+
+  .hero{
+    padding:30px 12px 15px;
+    margin-top:5px;
+    text-align:center;
+  }
+
+  .hero h1{
+    font-size:22px !important;
+    line-height:1.2;
+    padding-right: 0;
+  }
+
+  .hero p{
+    font-size:13px;
+    line-height:1.5;
+  }
+
+  .hero-controls{
+    flex-direction:column;
+    align-items:stretch;
+    gap:10px;
+  }
+
+  .search-container{
+    flex-direction:column;
+    width:100%;
+    gap:10px;
+  }
+
+  .search{
+    width:100%;
+    font-size:13px;
+    padding:10px 12px;
+  }
+
+  .search-btn{
+    width:100%;
+    font-size:13px;
+    padding:10px;
+  }
+
+  .location-banner{
+    width:100%;
+    font-size:11px;
+    padding:0 10px;
+    text-align:center;
+  }
+
+  .filters{
+    justify-content:center;
+    flex-wrap:wrap;
+    width:100%;
+    gap:8px;
+  }
+
+  .filter-btn{
+    flex:1 1 100%;
+    min-width:100%;
+    font-size:12px;
+    padding:10px;
+  }
+
+  .venues,
+  .venues2{
+    grid-template-columns:1fr;
+    gap:16px;
+    padding:0 12px 30px;
+  }
+
+  .venue-card{
+    max-width:100%;
+    min-height:auto;
+    border-radius:18px;
+  }
+
+  .image-wrapper img{
+    height:180px;
+    object-fit:cover;
+  }
+
+  .title-row{
+    gap:8px;
+    align-items:center;
+  }
+
+  .venue-logo,
+  .venue2-logo{
+    width:45px;
+    height:45px;
+  }
+
+  .title-row h3{
+    font-size:16px !important;
+  }
+
+  .location,
+  .court-info,
+  .price{
+    font-size:12px;
+    line-height:1.4;
+  }
+
+  .tags{
+    gap:5px;
+    flex-wrap:wrap;
+  }
+
+  .tag{
+    font-size:8px;
+    padding:5px 8px;
+  }
+
+  .book-btn{
+    font-size:11px;
+    padding:9px;
+    border-radius:10px;
+  }
+
+  .carouselWrapper{
+    height:290px;
+    border-radius:16px;
+  }
+
+  .carouselWrapper .pic{
+    width:70px;
+    height:70px;
+  }
+
+  .carouselWrapper .top{
+    top:30px;
+  }
+
+  .carouselWrapper .bottom{
+    top:110px;
+  }
+
+  .coming-soon-section{
+    height:100px;
+    padding:40px 8px;
+  }
+
+  .coming-soon-text{
+    font-size:18px !important;
+    letter-spacing:2px;
+    text-align:center;
+  }
+}

@@ -1,0 +1,536 @@
+/* =========================================================
+   START: BASE LAYOUT (DESKTOP)
+========================================================= */
+
+.reg-container {
+  width:90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.navbar {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+body {
+  background: #f5f2eb;
+  color: rgb(0, 0, 0);
+}
+
+/* =========================================================
+   START: MAIN CONTAINER (DESKTOP LAYOUT)
+========================================================= */
+
+.registration-container {
+  max-width: 1100px;
+  margin: 40px auto;
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  padding: 0 20px;
+}
+
+.card {
+  background: #f5f2eb;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+/* =========================================================
+   START: BOOKING SUMMARY SECTION
+========================================================= */
+
+.summary {
+    width: 290px;
+    height: 350px;
+    color: #ff0000;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.summary h3 {
+  margin-bottom: 20px;
+  font-size: 17px;
+  font-style: italic;
+  color: #777;
+}
+
+.summary-item {
+  border-top: 1px solid #eee;
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #777;
+  font-style: italic;
+}
+
+.summary small {
+  color: #777;
+  font-weight: 600;
+  display: block;
+  margin-top: 4px;
+  font-style: italic;
+}
+
+.total {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 22px;
+  font-weight: bold;
+  color: red;
+  font-style: italic;
+}
+
+.required {
+  color: red !important;
+}
+
+.name-fields {
+  display: flex;
+  gap: 10px;
+}
+
+.name-fields .form-control {
+  flex: 1;
+}
+
+/* =========================================================
+   START: UPLOAD SECTION
+========================================================= */
+
+.upload-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 2px dashed #ccc;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 12px;
+}
+
+.custom-file-btn {
+  background: #f1f1f1;
+  border: 1px solid #999;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-style: italic;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.custom-file-btn:hover {
+  background: #e5e5e5;
+}
+
+#file-name {
+  font-size: 13px;
+  color: #555;
+}
+
+.upload-title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #000;
+  font-style: italic;
+}
+
+/* =========================================================
+   END: UPLOAD SECTION
+========================================================= */
+
+.booking-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#f5f2eb;
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:10px;
+    font-size: 13px;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.booking-scroll {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    min-height: 0;   /* IMPORTANT FIX */
+}
+
+/* optional but helps */
+#bookingDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* =========================================================
+   START: INPUT VALIDATION STYLES
+========================================================= */
+
+.input-error {
+  border: 2px solid red !important;
+  background-color: #fff5f5 !important;
+}
+
+.input-success {
+  border: 2px solid green !important;
+  background-color: #f0fff4 !important;
+}
+
+.form-control:focus {
+  outline: none;
+}
+
+/* =========================================================
+   START: INTERNATIONAL TELEPHONE INPUT STYLES
+========================================================= */
+
+.iti {
+  width: 100%;
+  display: block;
+}
+
+.iti--allow-dropdown {
+  width: 100%;
+}
+
+.iti input,
+.iti input[type="tel"] {
+  width: 100%;
+  padding-left: 95px !important;
+}
+
+.iti__flag-container {
+  display: flex !important;
+  align-items: center;
+}
+
+.iti__selected-flag {
+  display: flex !important;
+  align-items: center;
+  gap: 6px;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.iti__arrow {
+  display: block !important;
+}
+
+/* Search input */
+.iti__search-input {
+  width: 100% !important;
+  height: 30px !important;
+  font-size: 14px !important;
+  padding: 10px !important;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+/* Dropdown container */
+.iti__country-list {
+  width: 100% !important;
+  max-height: 300px !important;
+}
+
+/* Country items */
+.iti__country {
+  padding: 10px !important;
+  font-size: 15px;
+}
+
+/* =========================================================
+   END: INTERNATIONAL TELEPHONE INPUT STYLES
+========================================================= */
+
+/* =========================================================
+   START: QR BOX SECTION
+========================================================= */
+
+.qr-box {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.qr-box img {
+  width: 150px;
+  height: 300px;
+  object-fit: cover;
+  margin-top: 10px;
+}
+
+/* =========================================================
+   START: FORM SECTION
+========================================================= */
+
+.form-section {
+  flex: 1;
+}
+
+.title {
+  margin-bottom: 25px;
+}
+
+.title h1 {
+  font-size: 27px;
+  margin-bottom: 6px;
+  font-style: italic;
+}
+
+.title p {
+  color: #777;
+  font-style: italic;
+  font-size: 13px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.form-control {
+  width: 100%;
+  padding: 9px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* =========================================================
+   START: PAYMENT SECTION
+========================================================= */
+
+.payment-box {
+  margin-top: 25px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  font-style: italic;
+}
+
+.payment-header {
+  background: #f8f8f8;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.badge-primary {
+  background: green;
+  color: white;
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.badge-secondary {
+  background: orange;
+  color: white;
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.payment-content {
+  padding: 20px;
+}
+
+.payment-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+/* =========================================================
+   START: SUBMIT BUTTON SECTION
+========================================================= */
+
+.submit-btn {
+  width: 100%;
+  height: 40px;
+  margin-top: 30px;
+  background: purple;
+  border: none;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: rgb(231, 41, 231);
+  color: #222;
+}
+
+/* =========================================================
+   START: RESPONSIVE DESIGN (MAX 1024px - SMALL LAPTOP / TABLET LANDSCAPE)
+========================================================= */
+
+@media (max-width: 1024px) {
+
+  .registration-container {
+    max-width: 900px;
+    gap: 20px;
+  }
+
+  .summary {
+    width: 260px;
+    height: 350px;
+  }
+
+  .title h1 {
+    font-size: 24px;
+  }
+
+  .submit-btn {
+    height: 42px;
+    font-size: 14px;
+  }
+}
+
+/* =========================================================
+   START: RESPONSIVE DESIGN (MAX 768px - TABLET PORTRAIT)
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .registration-container {
+    flex-direction: column;
+    margin: 20px auto;
+    gap: 20px;
+  }
+
+  .summary {
+    width: 100%;
+    height: 350px;
+  }
+
+  .form-section {
+    width: 100%;
+  }
+
+  .name-fields {
+    flex-direction: column;
+  }
+
+  .payment-row {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .qr-box img {
+    width: 140px;
+    height: auto;
+  }
+
+  .title h1 {
+    font-size: 22px;
+  }
+
+  .title p {
+    font-size: 12px;
+  }
+}
+
+
+/* =========================================================
+   START: RESPONSIVE DESIGN (MAX 480px - MOBILE DEVICES)
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .container {
+    padding: 0 10px;
+  }
+
+  .registration-container {
+    padding: 0 10px;
+    gap: 15px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  /* .navbar {
+    height: 60px;
+  } */
+
+  .title h1 {
+    font-size: 20px;
+  }
+
+  .form-control {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .summary {
+    height: 300px;
+  }
+
+  .summary h3 {
+    font-size: 15px;
+  }
+
+  .summary-item {
+    font-size: 13px;
+  }
+
+  .total {
+    font-size: 18px;
+  }
+
+  .submit-btn {
+    height: 38px;
+    font-size: 14px;
+  }
+
+  .upload-area {
+    padding: 15px;
+  }
+
+  .custom-file-btn {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+}
+
+
+
+
+
+
+

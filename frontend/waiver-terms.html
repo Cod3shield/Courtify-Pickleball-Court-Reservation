@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Waiver Modal</title>
+
+  <!-- CSS FILE -->
+  <link rel="stylesheet" href="waiver-terms.css">
+</head>
+<body>
+
+  <div class="modal-overlay" id="modal">
+
+    <div class="modal">
+
+      <h2>Terms & Conditions</h2>
+
+      <p>Please review, scroll down, and agree to proceed.</p>
+
+      <div class="terms-box">
+        <ol>
+          <li>Players are required to wear suitable athletic clothing and footwear.</li>
+          <li>Smoking, vaping, and similar activities are not allowed within the premises.</li>
+          <li>The use or possession of alcoholic drinks and prohibited substances is strictly forbidden.</li>
+          <li>All guests must treat other participants and personnel with courtesy and respect.</li>
+          <li>Offensive language, bullying, or aggressive conduct will not be tolerated.</li>
+          <li>Please help maintain cleanliness and dispose of waste properly.</li>
+          <li>Participants must follow the assigned schedule and allotted playing duration.</li>
+          <li>Sports equipment and facility property should be used responsibly.</li>
+          <li>The management may deny access to anyone violating facility policies.</li>
+          <li>Safety guidelines and staff instructions must be followed at all times.</li>
+        </ol>
+      </div>
+
+      <!-- LOADING SPINNER -->
+      <div id="loadingSpinner" style="display:none;">
+        <div class="spinner"></div>
+        <p>Submitting booking...</p>
+      </div>
+
+      <div class="buttons">
+
+        <button class="decline" onclick="declineTerms()">
+          Decline
+        </button>
+
+        <button class="agree" disabled>
+          I Agree
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- JS FILE -->
+  <script src="waiver-terms.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,302 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, sans-serif;
+}
+
+body{
+  background:#f5f2ed;
+  padding:40px 15px;
+  color:#222;
+}
+
+.container{
+  max-width:700px;
+  margin:auto;
+}
+
+.top{
+  text-align:center;
+  margin-bottom:25px;
+}
+
+.check-icon{
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  background:#dff7e7;
+  color:green;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:30px;
+  margin:0 auto 15px;
+  font-weight:bold;
+}
+
+.top h1{
+  font-size:25px;
+  margin-bottom:8px;
+  font-style: italic;
+}
+
+.top p{
+  color:red;
+  font-size:13px;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.card{
+  background:#fff;
+  border:1px solid #ddd;
+  border-radius:12px;
+  padding:25px;
+  margin-bottom:20px;
+  font-style: italic;
+  height:800px;
+  font-weight:bold;
+  font-size: 13px;
+}
+
+.section{
+  margin-bottom:25px;
+  padding-bottom:20px;
+  border-bottom:1px solid #eee;
+  font-weight:bold;
+}
+
+.section:last-child{
+  border-bottom:none;
+  margin-bottom:0;
+  padding-bottom:0;
+}
+
+.section-title{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-weight:bold;
+  margin-bottom:15px;
+}
+
+.status{
+  background:#dff7e7;
+  color:green;
+  padding:5px 12px;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:bold;
+}
+
+.label{
+  font-size:14px;
+  color:#777;
+  margin-bottom:5px;
+}
+
+.info{
+  color:#444;
+  line-height:1.7;
+}
+
+.court-badge{
+  display:inline-block;
+  color:#ff0000;
+  padding:7px 12px;
+  border-radius:6px;
+  font-size:13px;
+  margin-top:10px;
+}
+
+.payment-row{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:12px;
+  color:#444;
+}
+
+.total{
+  font-size:20px;
+  font-weight:bold;
+  color:red;
+}
+
+.buttons{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-bottom:20px;
+}
+
+.btn{
+  flex:1;
+  min-width:180px;
+  padding:14px;
+  border:none;
+  border-radius:8px;
+  background:#fff;
+  border:1px solid #ccc;
+  cursor:pointer;
+  font-weight: bold;
+  transition:0.3s;
+  font-style: italic;
+}
+
+.btn:hover{
+  background:#f3f3f3;
+}
+
+.info-box{
+  background:#eef5ff;
+  border:1px solid #cfe0ff;
+  padding:20px;
+  border-radius:10px;
+}
+
+.info-box h3{
+  margin-bottom:12px;
+  color:#ff0000;
+  font-style: italic;
+}
+
+.info-box ul{
+  padding-left:20px;
+  line-height:1.8;
+  color:#444;
+  font-style: italic;
+  font-size: 14px;
+}
+
+
+
+/* =========================
+   TABLET SIZE
+========================= */
+@media (max-width: 992px){
+
+  body{
+    padding:25px 12px;
+  }
+
+  .container{
+    max-width:100%;
+  }
+
+  .card{
+    padding:20px;
+    height:auto;
+  }
+
+  .top h1{
+    font-size:22px;
+  }
+
+  .payment-row{
+    font-size:15px;
+  }
+
+  .buttons{
+    gap:10px;
+  }
+
+  .btn{
+    min-width:150px;
+    padding:12px;
+  }
+}
+
+
+/* =========================
+   MOBILE SIZE
+========================= */
+@media (max-width: 600px){
+
+  body{
+    padding:20px 10px;
+  }
+
+  .top{
+    margin-bottom:20px;
+  }
+
+  .check-icon{
+    width:50px;
+    height:50px;
+    font-size:24px;
+  }
+
+  .top h1{
+    font-size:20px;
+  }
+
+  .top p{
+    font-size:12px;
+  }
+
+  .card{
+    padding:16px;
+    border-radius:10px;
+    height:auto;
+  }
+
+  .section{
+    margin-bottom:20px;
+    padding-bottom:15px;
+  }
+
+  .section-title{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:10px;
+  }
+
+  .label{
+    font-size:13px;
+  }
+
+  .info{
+    font-size:14px;
+    line-height:1.6;
+  }
+
+  .court-badge{
+    font-size:12px;
+    padding:6px 10px;
+  }
+
+  .payment-row{
+    font-size:14px;
+    gap:10px;
+  }
+
+  .total{
+    font-size:18px;
+  }
+
+  .buttons{
+    flex-direction:column;
+  }
+
+  .btn{
+    width:100%;
+    min-width:100%;
+    padding:13px;
+    font-size:14px;
+  }
+
+  .info-box{
+    padding:15px;
+  }
+
+  .info-box h3{
+    font-size:16px;
+  }
+
+  .info-box ul{
+    font-size:14px;
+    line-height:1.7;
+  }
+
+}
